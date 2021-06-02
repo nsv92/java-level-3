@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="550.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.Controller">
+    <HBox fx:id="loginPanel">
+      <HBox alignment="TOP_CENTER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="550.0">
+         <children>
+              <TextField fx:id="loginField" minWidth="-Infinity" onAction="#login" prefWidth="120.0" promptText="Login" HBox.hgrow="ALWAYS">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+            </TextField>
+            <TextField fx:id="passwordField" minWidth="-Infinity" prefWidth="120.0" promptText="Password">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="nicknameField" minWidth="-Infinity" prefWidth="120.0" promptText="Nickname">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </TextField>
+              <Button fx:id="loginButton" onAction="#login" prefHeight="26.0" prefWidth="90.0" text="Login">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="regButton" onAction="#regNewUser" prefHeight="26.0" prefWidth="63.0" text="Reg">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+    </HBox>
+    <HBox>
+        <TextArea fx:id="msgArea" editable="false" prefHeight="370.0" prefWidth="478.0" VBox.vgrow="ALWAYS" />
+        <VBox>
+            <Button fx:id="logoutButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout" text="Logout">
+                <VBox.margin>
+                    <Insets bottom="5.0" left="5.0" />
+                </VBox.margin>
+            </Button>
+            <ListView fx:id="clientList" maxWidth="100" minWidth="100" prefWidth="100" />
+        </VBox>
+    </HBox>
+    <HBox fx:id="msgPanel" alignment="BOTTOM_LEFT" managed="false" visible="false">
+        <TextField fx:id="msgField" onAction="#sendMsg" promptText="Enter your message" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets right="10.0" />
+            </HBox.margin></TextField>
+        <Button onAction="#sendMsg" text="Send" />
+        <VBox.margin>
+            <Insets top="10.0" />
+        </VBox.margin>
+    </HBox>
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+</VBox>
